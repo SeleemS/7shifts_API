@@ -69,24 +69,25 @@ def plot_combined_chart(df_filtered1, df_filtered2, date_range_str1, date_range_
     df_combined_pay.sort_values('total_pay_sum', ascending=False, inplace=True)
     df_combined_pay.drop(columns=['total_pay_sum'], inplace=True)
 
-    # Plotting the combined bar chart for total pay
-    ax = df_combined_pay.plot(x='role_label', y=[f'total_pay_{date_range_str1}', f'total_pay_{date_range_str2}'], kind='bar', figsize=(12, 8))
-    plt.title('Total Pay by Role for the Two Weeks', fontsize=16)
-    plt.ylabel('Total Pay', fontsize=14)
-    plt.xlabel('Role Label', fontsize=14)
-    plt.xticks(rotation=45, ha="right", fontsize=12)
+    # For the total pay bar chart
+    ax1 = df_combined_pay.plot(x='role_label', y=[f'total_pay_{date_range_str1}', f'total_pay_{date_range_str2}'], kind='bar', figsize=(12, 8))
+    plt.title('Total Pay by Role for the Two Weeks', fontsize=16, color='white')
+    plt.ylabel('Total Pay', fontsize=14, color='white')
+    plt.xlabel('Role Label', fontsize=14, color='white')
+    plt.xticks(rotation=45, ha="right", fontsize=12, color='white')
+    plt.yticks(color='white')
+    ax1.legend(fontsize=12, facecolor='grey')
     plt.grid(axis='y')
 
     # Adding the total_pay values on top of the bars
     for i, v in enumerate(df_combined_pay[f'total_pay_{date_range_str1}']):
-        ax.text(i - 0.15, v + 10, "$"+str(round(v, 2)), ha='center', va='bottom', fontsize=8)
+        ax1.text(i - 0.15, v + 10, "$"+str(round(v, 2)), ha='center', va='bottom', fontsize=8, color='black')
 
     for i, v in enumerate(df_combined_pay[f'total_pay_{date_range_str2}']):
-        ax.text(i + 0.15, v + 10, "$"+str(round(v, 2)), ha='center', va='bottom', fontsize=8)
+        ax1.text(i + 0.15, v + 10, "$"+str(round(v, 2)), ha='center', va='bottom', fontsize=8, color='black')
 
     plt.tight_layout()
-    plt.savefig(f'combined_barchart_pay_{date_range_str1}_and_{date_range_str2}.png')
-    print(f"Combined bar chart for total pay saved as combined_barchart_pay_{date_range_str1}_and_{date_range_str2}.png")
+    plt.savefig(f'combined_barchart_pay_{date_range_str1}_and_{date_range_str2}.png', facecolor='#1e1e1e')  # Assuming GitHub dark mode background color
     plt.close()
 
     # Combining the data of both weeks into a single data frame for total hours
@@ -97,23 +98,24 @@ def plot_combined_chart(df_filtered1, df_filtered2, date_range_str1, date_range_
     df_combined_hours.sort_values('total_hours_sum', ascending=False, inplace=True)
     df_combined_hours.drop(columns=['total_hours_sum'], inplace=True)
 
-    # Plotting the combined bar chart for total hours
-    ax = df_combined_hours.plot(x='role_label', y=[f'total_hours_{date_range_str1}', f'total_hours_{date_range_str2}'], kind='bar', color=['orange', 'yellow'], figsize=(12, 8))
-    plt.title('Total Hours by Role for the Two Weeks', fontsize=16)
-    plt.ylabel('Total Hours', fontsize=14)
-    plt.xlabel('Role Label', fontsize=14)
-    plt.xticks(rotation=45, ha="right", fontsize=12)
+    ax2 = df_combined_hours.plot(x='role_label', y=[f'total_hours_{date_range_str1}', f'total_hours_{date_range_str2}'], kind='bar', color=['orange', 'yellow'], figsize=(12, 8))
+    plt.title('Total Hours by Role for the Two Weeks', fontsize=16, color='white')
+    plt.ylabel('Total Hours', fontsize=14, color='white')
+    plt.xlabel('Role Label', fontsize=14, color='white')
+    plt.xticks(rotation=45, ha="right", fontsize=12, color='white')
+    plt.yticks(color='white')
+    ax2.legend(fontsize=12, facecolor='grey')
     plt.grid(axis='y')
 
     # Adding the total_hours values on top of the bars
     for i, v in enumerate(df_combined_hours[f'total_hours_{date_range_str1}']):
-        ax.text(i - 0.15, v + 1, str(round(v, 2))+' hrs', ha='center', va='bottom', fontsize=8)
+        ax2.text(i - 0.15, v + 1, str(round(v, 2))+' hrs', ha='center', va='bottom', fontsize=8, color='black')
 
     for i, v in enumerate(df_combined_hours[f'total_hours_{date_range_str2}']):
-        ax.text(i + 0.15, v + 1, str(round(v, 2))+' hrs', ha='center', va='bottom', fontsize=8)
+        ax2.text(i + 0.15, v + 1, str(round(v, 2))+' hrs', ha='center', va='bottom', fontsize=8, color='black')
 
     plt.tight_layout()
-    plt.savefig(f'combined_barchart_hours_{date_range_str1}_and_{date_range_str2}.png')
+    plt.savefig(f'combined_barchart_hours_{date_range_str1}_and_{date_range_str2}.png', facecolor='#1e1e1e')
     print(f"Combined bar chart for total hours saved as combined_barchart_hours_{date_range_str1}_and_{date_range_str2}.png")
 
 date_ranges = calculate_date_ranges()
