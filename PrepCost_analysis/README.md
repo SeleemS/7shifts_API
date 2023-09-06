@@ -14,14 +14,14 @@ This script is a great resource for cost managers and chefs, aiding them in a de
 
 **Benefits:**
 
-_Cost Efficiency and Budget Management_
+_Cost Efficiency and Budget Management_  
 Analyzing kitchen prep costs item by item allows for a more granulated view of the budget, facilitating better management and cost-efficiency. Managers can identify areas where costs might be escalating and take timely corrective actions.
 
-_Operational Insights_
+_Operational Insights_  
 By comparing data on a week-by-week basis, the script provides valuable insights into the operational dynamics of the kitchen. Managers can identify patterns and trends, helping to optimize inventory management, workforce allocation, and menu pricing.
 
-_Enhanced Decision Making_
+_Enhanced Decision Making_  
 The script serves as a tool to enhance decision-making processes. By having a clear understanding of the cost variations, managers can make data-driven decisions that can positively impact the profitability and efficiency of the restaurant.
 
-_Resource Allocation_
+_Resource Allocation_  
 Identifying the time and resources spent on each kitchen item allows for better resource allocation, ensuring that the kitchen operates at optimum efficiency without compromising on the quality of the dishes being served.
