@@ -43,6 +43,10 @@ This tool meticulously tracks the completion status of various task lists within
 3. Data-Driven Insights: Equips managers with data-driven insights to streamline operations, thus enhancing the overall productivity of the business.
 4. Optimized Task Distribution: Allows for the optimization of task distribution, ensuring a balanced workload and preventing bottlenecks in operations.
 
+## **3. Sales Breakdown Tool**
+
+In progress.
+
 
 
 
