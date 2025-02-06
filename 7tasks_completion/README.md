@@ -1,11 +1,3 @@
-**Incomplete Task List Analyzer**
-
-**Overview**
-
-The 7tasks feature assists in managing daily restaurant tasks efficiently, but identifying incomplete task lists by browsing through the data day by day can be quite laborious.
-
-This script is designed to streamline this process by automatically identifying incomplete task lists over a specified date range. This not only saves time but also enables pinpointing the exact issues, helping to identify the task lists that are not consistently completed, and thus the staff members who may be responsible for these discrepancies.
-
 **Features:**
 
 1. Automated Data Retrieval: Retrieves daily task list summaries from the 7Shifts API for a defined date range.
